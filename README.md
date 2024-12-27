@@ -1,4 +1,12 @@
 # HASS-plate-recognizer
+
+Many thanks to @Robmarkcole for original idea available here:
+
+https://github.com/robmarkcole/HASS-plate-recognizer
+
+This is a fork with my personal experience and some useful information related to my project in WiKi section.
+
+
 Read vehicle license plates with [Plate Recognizer ALPR](https://platerecognizer.com/) which offers free processing of 2500 images per month. You will need to create an account and get your API token.
 
 This integration adds an image processing entity where the state of the entity is the number of license plates found in a processed image. Information about the vehicle which has the license plate is provided in the entity attributes, and includes the license plate number, [region/country](http://docs.platerecognizer.com/#countries), vehicle type, and confidence (in a scale 0 to 1) in this prediction. For each vehicle an `platerecognizer.vehicle_detected` event is fired, containing the same information just listed. Additionally, statistics about your account usage are given in the `Statistics` attribute, including the number of `calls_remaining` out of your 2500 monthly available.
